@@ -1,0 +1,292 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+header {
+  background-color: #212d5a;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header .title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #f4c430;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0 15px;
+}
+
+nav ul li a {
+  color: #212d5a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+/* Main content styles */
+main {
+  flex: 1;
+  background-color: #212d5a;
+  padding: 30px 20px;
+}
+
+.rates-container, .content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Content page styles */
+.content-container {
+  background-color: #fff;
+  padding: 30px;
+  color: #333;
+  border-radius: 5px;
+}
+
+.content-container h2 {
+  color: #212d5a;
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid #f4c430;
+  padding-bottom: 10px;
+}
+
+.content-container p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.content-container a {
+  color: #212d5a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.content-container a:hover {
+  color: #f4c430;
+}
+
+/* Main rates section */
+.main-rates {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.rate-box {
+  flex: 1;
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  border-right: 1px solid #ccc;
+}
+
+.rate-box:last-child {
+  border-right: none;
+}
+
+.rate-box h2 {
+  color: #212d5a;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rate-box .price {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.price-range {
+  font-size: 14px;
+}
+
+.high {
+  color: green;
+}
+
+.low {
+  color: red;
+}
+
+/* Gold rates section */
+.gold-rates {
+  margin-bottom: 20px;
+}
+
+.rate-row {
+  display: flex;
+  background-color: #212d5a;
+  margin-bottom: 2px;
+  color: #fff;
+}
+
+.rate-label {
+  flex: 3;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.premium {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: #f4c430;
+  color: #212d5a;
+  font-weight: 700;
+}
+
+.price, .buy, .sell {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.buy {
+  background-color: #de151e;
+}
+
+.sell {
+  background-color: #75a28c;
+}
+
+.costing-row .rate-label {
+  flex: 2;
+}
+
+.rate-note {
+  text-align: right;
+  font-style: italic;
+  margin-top: 10px;
+  color: #f4c430;
+}
+
+/* Footer styles */
+footer {
+  background-color: #212d5a;
+  padding: 30px 0 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.info-box {
+  width: 30%;
+  margin-bottom: 30px;
+}
+
+.info-box h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #f4c430;
+}
+
+.info-box p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.info-box a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.info-box a:hover {
+  color: #f4c430;
+}
+
+.copyright {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #f4c430;
+  color: #212d5a;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .main-rates {
+    flex-direction: column;
+  }
+
+  .rate-box {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .rate-box:last-child {
+    border-bottom: none;
+  }
+
+  .info-box {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-box {
+    width: 100%;
+  }
+
+  .rate-row {
+    flex-direction: column;
+  }
+
+  .premium, .price, .buy, .sell {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
